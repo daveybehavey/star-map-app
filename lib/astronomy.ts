@@ -46,8 +46,9 @@ export function computeVisibleStars(
     const r = (90 - hor.altitude) / 90;
     const angle = (hor.azimuth * Math.PI) / 180;
 
-    const x = width / 2 + r * Math.sin(angle) * width * 0.45;
-    const y = height / 2 - r * Math.cos(angle) * height * 0.45;
+    const radius = Math.min(width, height) * 0.45;
+    const x = width / 2 + r * Math.sin(angle) * radius;
+    const y = height / 2 - r * Math.cos(angle) * radius;
 
     output.push({
       x,

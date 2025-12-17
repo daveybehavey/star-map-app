@@ -76,3 +76,4 @@ if __name__ == "__main__":
     count = convert_bsc5p_to_stars(input_file, output_file)
     print(f"Successfully created {output_file} with {count} stars")
 
+
